@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/Header";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -41,9 +40,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <BackgroundBeamsWithCollision>
+          <div className="h-screen flex items-center justify-center">
             {children}
-          </BackgroundBeamsWithCollision>
+          </div>
         </ThemeProvider>
       </body>
     </html>
